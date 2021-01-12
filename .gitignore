@@ -1,0 +1,13 @@
+# Default ignored files
+/.idea/workspace.xml
+*.iml
+*.idea
+*.iws
+*.class
+/.idea
+/log
+/logs
+/target
+/out
+/overlays
+/.scannerwork
