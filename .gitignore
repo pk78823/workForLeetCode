@@ -1,10 +1,10 @@
 # Default ignored files
-/.idea/workspace.xml
+/.idea
+/workspace.xml
 *.iml
 *.idea
 *.iws
 *.class
-/.idea
 /log
 /logs
 /target
