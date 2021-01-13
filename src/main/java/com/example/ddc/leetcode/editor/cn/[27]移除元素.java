@@ -50,9 +50,34 @@ package com.example.ddc.leetcode.editor.cn;
 
 
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int removeElement(int[] nums, int val) {
-        return 0;
+class Solution27 {
+    public static int removeElement(int[] nums, int val) {
+        //重要: 我们需要在原有数组中操作 , 不可以新开数组
+        //双指针 , 所有不是val的元素进行顺序移动就可以了
+//        int j = 0;
+//        for (int i=0; i<nums.length;i++){
+//            if (nums[i] != val) {
+//                nums[j++] = nums[i];
+//            }
+//        }
+//        return j;
+        //暴力解法 , 使用双层for循环进行遍历 , 就是移动后面的元素到前面
+        int size = nums.length;
+        for (int i=0;i<size;i++){
+            if (nums[i] == val) {
+                //将后面的元素全部移动到前面来,并且进行count的自加
+                for (int j=i+1;j<nums.length;){
+                    nums[j-1] = nums[j++];
+                }
+                i--;
+                size--;
+            }
+        }
+        return size;
+        }
+
+    public static void main(String[] args) {
+        System.out.println(removeElement(new int[]{0,1,2,2,3,0,4,2},2));
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
