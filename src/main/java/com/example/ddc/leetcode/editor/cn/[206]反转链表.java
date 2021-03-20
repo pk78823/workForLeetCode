@@ -73,8 +73,8 @@ class Solution206 {
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
-class ListNode {
+class ListNode1 {
     int val;
     ListNode next;
-    ListNode(int x) { val = x; }
+    ListNode1(int x) { val = x; }
 }
